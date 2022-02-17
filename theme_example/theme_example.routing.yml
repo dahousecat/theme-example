@@ -1,0 +1,7 @@
+theme_example.example:
+  path: '/theme-example'
+  defaults:
+    _controller: '\Drupal\theme_example\Controller\ThemeExampleController::simple'
+    _title: 'Test'
+  requirements:
+    _permission: 'administer upc_course'

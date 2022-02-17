@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Default theme implementation to my_element.
+ *
+ * Available variables:
+ * - element: Element that will be rendered.
+ * - element['link'] : a link
+ * - element['description'] : a description
+ * - element['pre_render_addition'] : added during the #pre_render function
+ * - element['random_number'] : a random number variable, won't be printed with the element.
+ *
+ * @ingroup themeable
+ */
+#}
+
+<div class="myElement">
+  <div class="randomNumber">Random Number: {{ element['#random_number'] }}</div>
+  <p>{{ element.description }}</p>
+  {{ element.link }}
+</div>
+
+{# Debug output #}
+<div>
+  <h3>We print the element</h3>
+  {{ element }}
+  <h3>Link</h3>
+  {{ element.link }}
+  <h3>Description</h3>
+  {{ element.description }}
+  <h3>#pre_render addition</h3>
+  {{ element.pre_render_addition }}
+  <h3>Random number (not printed when we printed the whole element</h3>
+  {{ element['#random_number'] }}
+</div>
